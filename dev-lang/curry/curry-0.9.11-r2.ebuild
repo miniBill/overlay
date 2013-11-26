@@ -33,7 +33,7 @@ src_prepare() {
 		"${FILESDIR}/${P}-fix-modern-ghc-configure.patch" \
 		"${FILESDIR}/${P}-ghc-7.6.patch"
 
-	use classful && epatch ${CLASSPATCH}
+	use classful && patch -p1 < ${CLASSPATCH}
 }
 
 src_configure() {
